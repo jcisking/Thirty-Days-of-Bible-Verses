@@ -81,79 +81,79 @@ object TipRepository {
             verseTextRes = R.string.verse_text_15,
             imageRes = R.drawable.lion_behaviour
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_16,
+            verseRes = R.string.verse_16,
+            verseTextRes = R.string.verse_text_16,
             imageRes = R.drawable.media_2018_01_2018_kt_cowboys
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_17,
+            verseRes = R.string.verse_17,
+            verseTextRes = R.string.verse_text_17,
             imageRes = R.drawable.moms5_4x3
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_18,
+            verseRes = R.string.verse_18,
+            verseTextRes = R.string.verse_text_18,
             imageRes = R.drawable.original_ww22791
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_19,
+            verseRes = R.string.verse_19,
+            verseTextRes = R.string.verse_text_19,
             imageRes = R.drawable.og3qaxbm3nlvrnfeloben7okxq
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_20,
+            verseRes = R.string.verse_20,
+            verseTextRes = R.string.verse_text_20,
             imageRes = R.drawable.istockphoto_178534800_612x612
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_21,
+            verseRes = R.string.verse_21,
+            verseTextRes = R.string.verse_text_21,
             imageRes = R.drawable.nature_photography
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_22,
+            verseRes = R.string.verse_22,
+            verseTextRes = R.string.verse_text_22,
             imageRes = R.drawable.pexels_sivakumar_b_97533
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_23,
+            verseRes = R.string.verse_23,
+            verseTextRes = R.string.verse_text_23,
             imageRes = R.drawable.photo_1535979863199_3c77338429a0
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_24,
+            verseRes = R.string.verse_24,
+            verseTextRes = R.string.verse_text_24,
             imageRes = R.drawable.photo_1610878180933_123728745d22
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_25,
+            verseRes = R.string.verse_25,
+            verseTextRes = R.string.verse_text_25,
             imageRes = R.drawable.rainbow
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_26,
+            verseRes = R.string.verse_26,
+            verseTextRes = R.string.verse_text_26,
             imageRes = R.drawable.road_1072823__340
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_27,
+            verseRes = R.string.verse_27,
+            verseTextRes = R.string.verse_text_27,
             imageRes = R.drawable.stock_photo_142984111_1500x1000
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_28,
+            verseRes = R.string.verse_28,
+            verseTextRes = R.string.verse_text_28,
             imageRes = R.drawable.tiger_main
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_29,
+            verseRes = R.string.verse_29,
+            verseTextRes = R.string.verse_text_29,
             imageRes = R.drawable.tornadoes_share
         ),Tip(
-            dayRes = R.string.day_2,
-            verseRes = R.string.verse_2,
-            verseTextRes = R.string.verse_text_2,
+            dayRes = R.string.day_30,
+            verseRes = R.string.verse_30,
+            verseTextRes = R.string.verse_text_30,
             imageRes = R.drawable.ybbawkg8minnavfe4z2arj
         )
     )
