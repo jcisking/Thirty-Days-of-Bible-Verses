@@ -14,7 +14,7 @@ object TipRepository {
             dayRes = R.string.day_2,
             verseRes = R.string.verse_2,
             verseTextRes = R.string.verse_text_2,
-            imageRes = R.drawable.images
+            imageRes = R.drawable._12px_a_sun_parakeet_kiss1
         ),Tip(
             dayRes = R.string.day_3,
             verseRes = R.string.verse_3,
