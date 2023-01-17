@@ -51,10 +51,14 @@ fun TipImage(tip: Tip, modifier: Modifier = Modifier) {
     Image(
         modifier = modifier
             .background(Color.Green)
-            .size(if (width < 800) 300.dp else Dp(Float.NaN)),
+            .size(if (width < 800) 350.dp else Dp(Float.NaN)),
 //            .size(Dp(Float.NaN)),
-//            .size(width = if (width < 700) 300.dp else Dp(width), height = if (width < 700) 300.dp else Dp(height)),
+//            .size(
+//                width = if (width < 700) 300.dp else Dp(width.toFloat()),
+//                height = if (width < 700) 300.dp else Dp(height.toFloat())
+//            ),
         painter = painterResource(id = tip.imageRes),
+        contentScale = if (width < 800) ContentScale.FillBounds else ContentScale.Fit,
         contentDescription = null
     )
 }
