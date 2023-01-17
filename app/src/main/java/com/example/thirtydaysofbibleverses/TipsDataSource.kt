@@ -14,6 +14,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import com.example.thirtydaysofbibleverses.data.Tip
 
@@ -45,10 +46,14 @@ fun BibleVerseAndText(tip: Tip, modifier: Modifier = Modifier) {
 
 @Composable
 fun TipImage(tip: Tip, modifier: Modifier = Modifier) {
-    val size = painterResource(id = tip.imageRes).intrinsicSize.width
+    val width = painterResource(id = tip.imageRes).intrinsicSize.width
+    val height = painterResource(id = tip.imageRes).intrinsicSize.height
     Image(
-        modifier = modifier.background(Color.Green).size(if (size < 700) 300.dp else 600.dp),
-//            .size(if (size < 700) 300.dp else 500.dp),
+        modifier = modifier
+            .background(Color.Green)
+            .size(if (width < 800) 300.dp else Dp(Float.NaN)),
+//            .size(Dp(Float.NaN)),
+//            .size(width = if (width < 700) 300.dp else Dp(width), height = if (width < 700) 300.dp else Dp(height)),
         painter = painterResource(id = tip.imageRes),
         contentDescription = null
     )
