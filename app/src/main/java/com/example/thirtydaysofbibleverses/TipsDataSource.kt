@@ -8,17 +8,21 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.thirtydaysofbibleverses.data.Tip
 
 @Composable
 fun TipItem(tip: Tip, modifier: Modifier = Modifier) {
     Card(modifier = modifier.padding(16.dp), elevation = 8.dp) {
-        Column(modifier = Modifier.padding(top = 16.dp, bottom = 16.dp, start = 8.dp, end = 8.dp).background(Color.Blue)) {
+        Column(modifier = Modifier
+            .padding(top = 16.dp, bottom = 16.dp, start = 8.dp, end = 8.dp)
+            .background(Color.Blue)) {
             TipHeader(tip)
             TipImage(tip = tip)
             BibleVerseAndText(tip)
@@ -41,9 +45,10 @@ fun BibleVerseAndText(tip: Tip, modifier: Modifier = Modifier) {
 
 @Composable
 fun TipImage(tip: Tip, modifier: Modifier = Modifier) {
+    val size = painterResource(id = tip.imageRes).intrinsicSize.width
     Image(
-        modifier = modifier.background(Color.Green),
-//                contentScale = ContentScale.FillBounds,
+        modifier = modifier.background(Color.Green).size(if (size < 700) 300.dp else 600.dp),
+//            .size(if (size < 700) 300.dp else 500.dp),
         painter = painterResource(id = tip.imageRes),
         contentDescription = null
     )
