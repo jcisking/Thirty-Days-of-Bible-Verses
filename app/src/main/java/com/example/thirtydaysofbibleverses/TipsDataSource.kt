@@ -23,9 +23,9 @@ fun TipItem(tip: Tip, modifier: Modifier = Modifier) {
     Card(modifier = modifier.padding(16.dp), elevation = 8.dp) {
         Column(modifier = Modifier
             .padding(top = 16.dp, bottom = 16.dp, start = 8.dp, end = 8.dp)
-            .background(Color.Blue)) {
+            ) {
             TipHeader(tip)
-            TipImage(tip = tip)
+            TipImage(tip = tip, modifier = Modifier.align(Alignment.CenterHorizontally))
             BibleVerseAndText(tip)
         }
     }
@@ -50,15 +50,9 @@ fun TipImage(tip: Tip, modifier: Modifier = Modifier) {
     val height = painterResource(id = tip.imageRes).intrinsicSize.height
     Image(
         modifier = modifier
-            .background(Color.Green)
-            .size(if (width < 800) 350.dp else Dp(Float.NaN)),
-//            .size(Dp(Float.NaN)),
-//            .size(
-//                width = if (width < 700) 300.dp else Dp(width.toFloat()),
-//                height = if (width < 700) 300.dp else Dp(height.toFloat())
-//            ),
+            .size(if (width < 800 && height < 600) 300.dp else Dp(Float.NaN)),
         painter = painterResource(id = tip.imageRes),
-        contentScale = if (width < 800) ContentScale.FillBounds else ContentScale.Fit,
+        contentScale = if (width < 800 && height < 600) ContentScale.FillBounds else ContentScale.Fit,
         contentDescription = null
     )
 }

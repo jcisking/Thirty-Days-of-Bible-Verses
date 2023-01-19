@@ -69,7 +69,7 @@ object TipRepository {
             dayRes = R.string.day_13,
             verseRes = R.string.verse_13,
             verseTextRes = R.string.verse_text_13,
-            imageRes = R.drawable.d7b61a0c49f35d50827295d6e78e68b3
+            imageRes = R.drawable.zugpsitze_mountain
         ),Tip(
             dayRes = R.string.day_14,
             verseRes = R.string.verse_14,
