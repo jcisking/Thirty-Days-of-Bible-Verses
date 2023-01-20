@@ -19,13 +19,20 @@ val SofiaSans = FontFamily(
 val Typography = Typography(
     defaultFontFamily = SofiaSans,
     h1 = TextStyle(
-        fontWeight = FontWeight.Bold
+        fontWeight = FontWeight.Bold,
+        fontSize = 30.sp
     ),
     h2 = TextStyle(
-        fontWeight = FontWeight.Normal
+        fontWeight = FontWeight.Normal,
+        fontSize = 30.sp
+    ),
+    h3 = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp
     ),
     body1 = TextStyle(
-        fontWeight = FontWeight.ExtraLight
+        fontWeight = FontWeight.ExtraLight,
+        fontSize = 16.sp
     )
 
     /* Other default text styles to override

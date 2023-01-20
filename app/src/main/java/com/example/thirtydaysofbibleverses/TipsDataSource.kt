@@ -3,11 +3,14 @@ package com.example.thirtydaysofbibleverses
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -33,14 +36,25 @@ fun TipItem(tip: Tip, modifier: Modifier = Modifier) {
 
 @Composable
 fun TipHeader(tip: Tip, modifier: Modifier = Modifier) {
-    Text(modifier = modifier, text = stringResource(id = tip.dayRes))
+    Text(
+        modifier = modifier
+            .padding(bottom = 16.dp),
+        text = stringResource(id = tip.dayRes),
+        style = MaterialTheme.typography.h2
+    )
 }
 
 @Composable
 fun BibleVerseAndText(tip: Tip, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
-        Text(text = stringResource(id = tip.verseRes))
-        Text(text = stringResource(id = tip.verseTextRes))
+        Text(
+            text = stringResource(id = tip.verseRes),
+            style = MaterialTheme.typography.h3
+        )
+        Text(
+            text = stringResource(id = tip.verseTextRes),
+            style = MaterialTheme.typography.body1
+        )
     }
 }
 
@@ -50,7 +64,9 @@ fun TipImage(tip: Tip, modifier: Modifier = Modifier) {
     val height = painterResource(id = tip.imageRes).intrinsicSize.height
     Image(
         modifier = modifier
-            .size(if (width < 800 && height < 600) 300.dp else Dp(Float.NaN)),
+            .padding(bottom = 20.dp)
+            .size(if (width < 800 && height < 600) 300.dp else Dp(Float.NaN))
+            .clip(RoundedCornerShape(8.dp)),
         painter = painterResource(id = tip.imageRes),
         contentScale = if (width < 800 && height < 600) ContentScale.FillBounds else ContentScale.Fit,
         contentDescription = null
