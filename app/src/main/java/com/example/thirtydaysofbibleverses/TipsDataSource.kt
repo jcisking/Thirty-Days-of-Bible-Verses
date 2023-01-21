@@ -1,5 +1,11 @@
 package com.example.thirtydaysofbibleverses
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.FastOutLinearInEasing
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -24,22 +30,31 @@ import androidx.compose.runtime.*
 
 @Composable
 fun TipItem(tip: Tip, modifier: Modifier = Modifier) {
-    var expanded by remember { mutableStateOf(true) }
+    var expanded by remember { mutableStateOf(false) }
+    val color by animateColorAsState(if (expanded) MaterialTheme.colors.secondary else MaterialTheme.colors.surface)
+
     Card(
         modifier = modifier
             .padding(16.dp)
-            .clip(RoundedCornerShape(10.dp)),
+            .clip(RoundedCornerShape(10.dp)
+            ),
         elevation = 8.dp) {
         Column(
             modifier = Modifier
-                    .padding(top = 16.dp, bottom = 16.dp, start = 8.dp, end = 8.dp)
+                .background(color)
+                .padding(top = 16.dp, bottom = 16.dp, start = 8.dp, end = 8.dp)
+                .animateContentSize(animationSpec = tween(
+                    durationMillis = 500,
+                    delayMillis = 50,
+                    easing = FastOutLinearInEasing
+                ))
             ) {
             TipHeader(tip)
             TipImage(tip = tip, modifier = Modifier.align(Alignment.CenterHorizontally))
-            TipItemButton(expanded = expanded , onClick = { expanded = !expanded })
             if (expanded) {
                 BibleVerseAndText(tip)
             }
+            TipItemButton(expanded = expanded , onClick = { expanded = !expanded })
         }
     }
 }
@@ -90,8 +105,14 @@ fun TipItemButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    IconButton(onClick = onClick) {
+    IconButton(
+        onClick = onClick, modifier = modifier
+            .fillMaxWidth()
+//            .background(MaterialTheme.colors.secondary)
+
+    ) {
         Icon(
+            modifier = Modifier,
             imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
             contentDescription = null)
     }
