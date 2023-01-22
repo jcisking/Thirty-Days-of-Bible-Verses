@@ -3,10 +3,12 @@ package com.example.thirtydaysofbibleverses
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.*
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -38,11 +40,14 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun BibleVerseApp() {
-    LazyColumn() {
-        items(TipRepository.tips) {
-            TipItem(tip = it)
+    Scaffold(topBar = {BibleVerseTopAppBar()}) {
+        LazyColumn() {
+            items(TipRepository.tips) {
+                TipItem(tip = it)
+            }
         }
     }
+
 
 }
 
