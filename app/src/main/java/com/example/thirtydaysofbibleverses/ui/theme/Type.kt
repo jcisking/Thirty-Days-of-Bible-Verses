@@ -9,6 +9,10 @@ import androidx.compose.ui.unit.sp
 import com.example.thirtydaysofbibleverses.R
 
 
+val NotoSerfDisplay = FontFamily(
+    Font(R.font.notoserifdisplay_bold, FontWeight.Bold)
+)
+
 val SofiaSans = FontFamily(
     Font(R.font.sofiasans_regular, FontWeight.Normal),
     Font(R.font.sofiasans_bold, FontWeight.Bold),
@@ -19,6 +23,7 @@ val SofiaSans = FontFamily(
 val Typography = Typography(
     defaultFontFamily = SofiaSans,
     h1 = TextStyle(
+        fontFamily = NotoSerfDisplay,
         fontWeight = FontWeight.Bold,
         fontSize = 30.sp
     ),

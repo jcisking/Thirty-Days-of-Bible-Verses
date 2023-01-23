@@ -107,16 +107,19 @@ fun TipImage(tip: Tip, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun BibleVerseTopAppBar() {
-    Row() {
+fun BibleVerseTopAppBar(modifier: Modifier = Modifier) {
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
         Image(
-            modifier = Modifier.size(64.dp),
-            painter = painterResource(id = R.drawable.holly_bible_624845_14),
+            modifier = Modifier.size(64.dp).padding(8.dp),
+            painter = painterResource(id = R.drawable.holy_bible_svgrepo_com),
             contentDescription = null,
-            colorFilter = ColorFilter.tint(MaterialTheme.colors.primary, BlendMode.Lighten)
+            colorFilter = ColorFilter.tint(MaterialTheme.colors.primary)
         )
-        Text(text = stringResource(id = R.string.app_name))
-        
+        Text(
+
+            text = stringResource(id = R.string.app_name),
+            style = MaterialTheme.typography.h1
+        )
     }
 
 }
